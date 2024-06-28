@@ -700,7 +700,7 @@ footer span a:hover {
     }
 }
 body {
-    background-image: url('images.jpg'); /* Ensure the file name and path are correct */
+    background-image: url('image.jpg'); /* Ensure the file name and path are correct */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
