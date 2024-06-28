@@ -700,7 +700,7 @@ footer span a:hover {
     }
 }
 body {
-    background-image: url('pics.jpg'); /* Use the new image */
+    background-color: #8a2be2; /* Purple color */
     background-size: cover; /* or 'contain' */
     background-repeat: no-repeat;
     background-position: center center;
