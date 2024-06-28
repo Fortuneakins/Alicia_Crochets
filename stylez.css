@@ -699,3 +699,12 @@ footer span a:hover {
         margin: 25px 0;
     }
 }
+
+
+body {
+    background-image: url('images.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif; /* You can add other styles as needed */
+}
