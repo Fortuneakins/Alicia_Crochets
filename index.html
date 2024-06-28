@@ -11,6 +11,112 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .max-width {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+        }
+        .navbar .logo a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+        }
+        .navbar .menu {
+            display: flex;
+            list-style: none;
+        }
+        .navbar .menu li {
+            margin-left: 20px;
+        }
+        .navbar .menu li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+        .title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .home .home-content {
+            text-align: center;
+        }
+
+        .about-content, .skills-content, .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .about-content .column, .skills-content .column, .contact-content .column {
+            flex: 1;
+            padding: 20px;
+        }
+        .about-content img, .skills-content img, .contact-content img {
+            max-width: 100%;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #333;
+                z-index: 1;
+            }
+            .navbar .menu li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .menu-btn {
+                display: block;
+            }
+            .about-content, .skills-content, .contact-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar .logo a {
+                font-size: 18px;
+            }
+            .navbar .menu li a {
+                font-size: 16px;
+            }
+            .title {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="scroll-up-btn">
@@ -159,21 +265,21 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="C:\Users\Admin\Downloads\images\the riddler.jpg" alt="">
-                        <div class="text">Amu </div>
+                        <img src="C:\Users\Admin\Downloads\images\the riddler.jpg" alt="Amu">
+                        <div class="text">Amu</div>
                         <p>Quality Control</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="C:\Users\Admin\OneDrive\Documents\Dip in ICT course\Second Year 2024\INFO SYSTEMS PROJECT\Mask-group-6.png" alt="">
+                        <img src="C:\Users\Admin\OneDrive\Documents\Dip in ICT course\Second Year 2024\INFO SYSTEMS PROJECT\Mask-group-6.png" alt="Gosego">
                         <div class="text">Gosego</div>
                         <p>Customer Support</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
-                        <img src="C:\Users\Admin\OneDrive\Documents\Dip in ICT course\Second Year 2024\INFO SYSTEMS PROJECT\beautiful-female-african-american-business-600nw-1601707636.webp" alt="">
+                        <img src="C:\Users\Admin\OneDrive\Documents\Dip in ICT course\Second Year 2024\INFO SYSTEMS PROJECT\beautiful-female-african-american-business-600nw-1601707636.webp" alt="Georgie">
                         <div class="text">Georgie</div>
                         <p>Marketing Specialist</p>
                     </div>
@@ -242,6 +348,37 @@
     <footer>
         <span>Created By <a href="https://www.codingnepalweb.com">Alicia Crochets Team</a> | <span class="far fa-copyright"></span> 2024 All rights reserved.</span>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Toggle menu/navbar script
+            $('.menu-btn').click(function(){
+                $('.navbar .menu').toggleClass('active');
+                $('.menu-btn i').toggleClass('active');
+            });
+
+            // Owl Carousel script
+            $('.carousel').owlCarousel({
+                margin: 20,
+                loop: true,
+                autoplay: true,
+                autoplayTimeOut: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: false
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
