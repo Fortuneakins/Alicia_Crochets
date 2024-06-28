@@ -703,7 +703,7 @@ body {
     background-image: url('images.jpeg'); /* Ensure the file name and path are correct */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     font-family: Arial, sans-serif; /* You can add other styles as needed */
 }
 
