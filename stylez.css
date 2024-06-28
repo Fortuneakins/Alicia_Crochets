@@ -699,4 +699,10 @@ footer span a:hover {
         margin: 25px 0;
     }
 }
-
+body {
+    background-image: url('picture.jpg'); /* Use the new image */
+    background-size: cover; /* or 'contain' */
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: Arial, sans-serif;
+}
